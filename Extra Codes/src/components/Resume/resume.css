@@ -1,0 +1,177 @@
+body{
+    font-family: "Calibri", sans-serif;
+
+}
+
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #f8f8ff;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-style: italic;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 50px;
+    margin-left: 200px;
+  }
+  
+  label {
+    display: block;
+    font-weight:bold;
+    margin-bottom: 10px;
+  }
+  .cv5{
+    width: 500px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+
+  }
+  
+  #cv5 {
+    width: 500px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  input[type="tel"] {
+    width: 345px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  input[type="url"] {
+    width: 500px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  input[type="date"] {
+    width: 500px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  select{
+    width: 155px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+
+  }
+  .gender {
+    width: 520px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  input[type="number"] {
+    width: 500px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  input[type="email"] {
+    width: 500px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  input[type="file"] {
+    width: 500px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 40px 20px;
+    border: none;
+    cursor: pointer;
+  }
+.country
+{
+    width: 520px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+
+}
+  .cv {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 24px; /* Adjust the value as needed */
+
+    width: 20%;
+  }
+  
+  .cv-input {
+    display: inline-block;
+    width: 75%;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Adjust as needed */
+  }
+  
+  .blue-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 10px; /* Add this line for curved corners */
+    
+    margin-right: 50px; /* Add this line to create a gap to the right */
+
+
+  }
+  
+  .white-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 10px; /* Add this line for curved corners */
+
+  }
+  
+
+  .summary-container {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .summary-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .summary-textarea {
+    width: 490px;
+    height: 150px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 8px;
+  }

@@ -1,0 +1,187 @@
+user_page.css
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Top Section */
+.top-section {
+  height: 10%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name-info {
+  color: #fff;
+}
+
+.job-title {
+  font-size: 16px;
+  position: relative;
+  text-align: right;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+#personal{
+  color:  #007BFF;
+}
+.button {
+  background-color: #0056b3;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Left Section */
+.left-sections {
+  background-color: #f0f0f0;
+  width: 30%;
+  padding: 20px;
+}
+
+.left-sections h2 {
+  color: #333;
+  font-size: 24px;
+}
+
+.left-sections p {
+  color: #555;
+  font-size: 16px;
+  margin: 8px 0;
+}
+.label {
+  color: #333; /* Default color for labels */
+}
+
+.label-dark {
+  color: #000; /* Darker color for Date Of Birth label */
+}
+
+/* Right Section */
+.right-sections {
+  background-color: #fff;
+  width: 70%;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.right-sections h2 {
+  color: #007BFF;
+  font-size: 24px;
+}
+
+.right-sections h3 {
+  color: #333;
+  font-size: 20px;
+}
+
+.right-sections p {
+  color: #555;
+  font-size: 16px;
+  margin: 8px 0;
+}
+/* Your existing CSS styles go here */
+
+/* Left Section */
+.left-sections {
+  background-color: #f0f0f0;
+  width: 30%;
+  padding: 20px;
+}
+
+.section-title {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.left-sections p {
+  color: #555;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* Right Section */
+.right-sections {
+  background-color: #fff;
+  width: 70%;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.right-sections h2 {
+  color: #007BFF;
+  font-size: 24px;
+}
+
+.right-sections h3 {
+  color: #333;
+  font-size: 20px;
+}
+
+.right-sections p {
+  color: #555;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* Top Section */
+.top-section {
+  background-color: #e8e8e8;
+  height: 10%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.header-content {
+  text-align: center;
+}
+
+.name {
+  color: #007BFF;
+  font-size: 24px;
+  margin: 0;
+}
+
+.job-title {
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px; /* Add some spacing below the name */
+}
+
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* Center align buttons horizontally */
+  align-items: center; /* Center align buttons vertically */
+}
+
+.button {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}

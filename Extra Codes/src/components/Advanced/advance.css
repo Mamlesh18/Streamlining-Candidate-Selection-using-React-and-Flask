@@ -1,0 +1,92 @@
+body{
+    font-family: "Calibri", sans-serif;
+
+}
+
+
+.container-2 {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #f8f8ff
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-style: italic;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 50px;
+    margin-left: 200px;
+  }
+  
+  label {
+    display: block;
+    font-weight:bold;
+    margin-bottom: 10px;
+  }
+  
+#cv1{
+    width: 500px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cv {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 24px; /* Adjust the value as needed */
+
+    width: 20%;
+  }
+  
+  .cv-input {
+    display: inline-block;
+    width: 75%;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Adjust as needed */
+  }
+  
+  .blue-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px; /* Add this line for curved corners */
+    
+    margin-right: 20px; /* Add this line to create a gap to the right */
+
+
+  }
+  
+  .white-button {
+    background-color: gray;
+    color: blue;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px; /* Add this line for curved corners */
+
+  }
+  

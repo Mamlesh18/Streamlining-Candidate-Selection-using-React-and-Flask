@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px; /* Gap between search bars */
+  align-items: center; /* Vertically center align items */
+}
+.result-box {
+  position: absolute;
+  top: 100%; /* Position the results box just below the search bar */
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: scroll;
+  border-radius: 10px;
+  background-color: #fff; /* Add a background color to make it stand out */
+  z-index: 1; /* Ensure it appears above other content */
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-input1 {
+  border: 2px solid #d1d5db;
+  border-radius: 15px;
+  padding: 12px 30px;
+  width: 600px;
+  text-indent: 20px;
+}
+.search-input2 {
+  border:2px solid #d1d5db;
+  border-radius: 15px;
+  padding: 12px 30px;
+  width: 300px;
+  text-indent: 20px;
+}
+
+.search-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  color: #9ca3af;
+  pointer-events: none;
+  font-size: 12px;
+}
+
+.search-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 10px; /* Add some space between the input and button */
+}
+
+.search-button-1{
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 10px;
+  top: 20px;
+  margin-top: 4px;
+
+  right: 110px;  
+}
+.login-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 10px;
+  top: 20px;
+  margin-top: 4px;
+
+  right: 20px;
+}
+
+
+@media screen and (max-width: 720px) {
+   #input-box{
+    width: 50px;
+  }
+  .additional-info {
+    width: 100px;
+  }
+  .options {
+    width: 100px;
+  }
+}
