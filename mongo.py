@@ -59,7 +59,7 @@ def error_response(message, success=True):
 @cross_origin(origin='*')
 def login_user():
     request_body = request.get_json()
-    collection = db['user']
+    collection = db['users']
     user = collection.find_one({'email': request_body['email'], 'password': request_body['password']})
     if user:
         user['_id'] = str(user['_id'])
@@ -140,11 +140,8 @@ def get_filter_data():
         pipeLineQuery=pipeLineQuery.replace("%MATCH%",'')
     print(pipeLineQuery)
 
-    # Example aggregation pipeline
     pipeline = json.loads(pipeLineQuery)
     
-
-    # Execute the aggregation pipeline
     result = list(collection.aggregate(pipeline))
     return send_response(result)
 
@@ -152,7 +149,7 @@ def get_filter_data():
 @cross_origin(origin='*')
 def get_detail(detailId):
     try:
-        detail = db['user-details'].find_one({'_id': ObjectId(detailId)})  # Use ObjectId for proper ID matching
+        detail = db['user-details'].find_one({'_id': ObjectId(detailId)}) 
         if detail:
             return send_response(detail)
         else:

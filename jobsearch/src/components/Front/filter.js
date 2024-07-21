@@ -15,8 +15,7 @@ const Filter = ({ filterData }) => {
         let res = await getCall(`filter?interval=${selectedInterval}`);
         const regularTop10 = res.data.data;
 
-        // Merge regular top 10 data with search results
-        const mergedTop10 = filterData.length > 0 ? [...filterData, ...regularTop10] : regularTop10;
+         const mergedTop10 = filterData.length > 0 ? [...filterData, ...regularTop10] : regularTop10;
 
         setTop10Data(mergedTop10);
       } catch (error) {
