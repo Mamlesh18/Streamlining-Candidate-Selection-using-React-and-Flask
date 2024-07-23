@@ -505,7 +505,7 @@ console.log(res)
   <div class="cv">
     <label for="cv">Resume Upload</label>
   </div>
-  <div class="cv-input">
+  {/* <div class="cv-input">
       <h3>Resume <span className="mandatory-indicator">*</span></h3>
 
         <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx"/>
@@ -514,7 +514,12 @@ console.log(res)
 
           <input type="file" id="Cover_Letter" name="resume" accept=".pdf,.doc,.docx"/>
 
-</div>
+</div> */}
+      <NavLink to="/FileUpload">
+      <button id="btn" >Click here to upload your resume</button>
+
+      </NavLink>
+
 <br/>
       <br/>
       
