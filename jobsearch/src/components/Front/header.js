@@ -97,12 +97,12 @@ function SearchBar({ updateFilterData }) {
 
           <NavLink to="/advance">
             <button className="search-button" id="advance-search">
-              A
+              Advance search
             </button>
           </NavLink>
           <NavLink to="/resume">
-            <button className="search-button-1" id="resume">
-              S
+            <button className="search-button-2" id="resume">
+              Resume
             </button>
           </NavLink>
           <NavLink to="/admin_login">

@@ -6,13 +6,13 @@ import Detail from './details'; // Import the new Detail component
 
 
 const Filter = ({ filterData }) => {
-  const [top10Data, setTop10Data] = useState([]);
-  const [selectedInterval, setSelectedInterval] = useState('recents');
+  const [top10Datas, setTop10Data] = useState([]);
+  const [selectedIntervals, setSelectedInterval] = useState('recents');
 
   useEffect(() => {
     const fetchTop10Details = async () => {
       try {
-        let res = await getCall(`admin?intervals=${selectedInterval}`);
+        let res = await getCall(`admin?intervals=${selectedIntervals}`);
         const regularTop10 = res.data.data;
 
          const mergedTop10 = filterData.length > 0 ? [...filterData, ...regularTop10] : regularTop10;
@@ -24,7 +24,7 @@ const Filter = ({ filterData }) => {
     };
 
     fetchTop10Details();
-  }, [selectedInterval, filterData]); // Update when selectedInterval or filterData changes
+  }, [selectedIntervals, filterData]); // Update when selectedInterval or filterData changes
 
   const handleSortChange = (event) => {
     setSelectedInterval(event.target.value);
@@ -165,7 +165,7 @@ const Filter = ({ filterData }) => {
         <h1>Top 10 Details</h1>
         <label>
           Sort by:
-          <select value={selectedInterval} onChange={handleSortChange}>
+          <select value={selectedIntervals} onChange={handleSortChange}>
             <option value="recent">Relevance - Most Recent</option>
             <option value="oneWeek">One Week</option>
             <option value="oneMonth">One Month</option>
@@ -176,7 +176,7 @@ const Filter = ({ filterData }) => {
       </div>
 
       <div>
-        {top10Data.map((detail) => (
+        {top10Datas.map((detail) => (
           <div key={detail._id} className="outline-box">
             <div className="job-info">
               <p>
@@ -188,11 +188,11 @@ const Filter = ({ filterData }) => {
                 <span>{detail.state}</span>
               </p>
               <p>{detail.email}</p>
-              {/* <NavLink to={`/Detail/${detail._id}`} activeClassName="nav-link-active"> */}
+              <NavLink to={`/Detail/${detail._id}`} activeClassName="nav-link-active">
   <button className="show-more" style={{ color: 'blue', fontSize: '16px' }}>
     Show more
   </button>
-{/* </NavLink> */}
+</NavLink>
             </div>
           </div>
         ))}

@@ -1,4 +1,5 @@
 // FrontPage.js
+
 import React from 'react';
 
 import Header from './components/admin/header_1';

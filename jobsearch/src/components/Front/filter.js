@@ -188,11 +188,11 @@ const Filter = ({ filterData }) => {
                 <span>{detail.state}</span>
               </p>
               <p>{detail.email}</p>
-              {/* <NavLink to={`/Detail/${detail._id}`} activeClassName="nav-link-active"> */}
+              <NavLink to={`/Detail/${detail._id}`} activeClassName="nav-link-active">
   <button className="show-more" style={{ color: 'blue', fontSize: '16px' }}>
     Show more
   </button>
-{/* </NavLink> */}
+</NavLink>
             </div>
           </div>
         ))}

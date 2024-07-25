@@ -80,6 +80,19 @@ header {
 
   right: 110px;  
 }
+.search-button-2{
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 10px;
+  top: 20px;
+  margin-top: 4px;
+
+  right: 120px;  
+}
 .login-button {
   background-color: blue;
   color: white;
