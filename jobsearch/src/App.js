@@ -25,8 +25,6 @@ function App() {
         <Route path="/advance" element={<Advance />} />
         <Route path="/FileUpload" element={<FileUpload />} />
         <Route path="/admin_login" element={<Admin_Login />} />
-
-
         <Route path="/user" element={<User />} />
         <Route path="/welcome" element={<Welcome />} />
         <Route path="/Details" element={<Details />} />

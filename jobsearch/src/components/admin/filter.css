@@ -58,6 +58,8 @@ main {
   padding: 40px;
   background-color: #bcbcbc;
   align-items: center;
+  overflow: auto;
+  max-height: 1000px;
 }
 
 .big-curvy-textbox {
@@ -97,6 +99,9 @@ main {
 {
   color: 'blue';
   font-size: '16px';
+  cursor: pointer;
+
+
 }
 
 .outline-box {
