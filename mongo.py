@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from pymongo import MongoClient
 from flask_cors import CORS, cross_origin
 from bson import ObjectId
+import gridfs
 
 app = Flask(__name__)
 CORS(app)
@@ -156,6 +157,31 @@ def get_detail(detailId):
             return error_response("Detail not found", False)
     except Exception as e:
         return error_response(f"Error fetching detail: {str(e)}", False)
+fs = gridfs.GridFS(db)
+
+@app.route('/file', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'}), 400
+
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    file_id = fs.put(file, filename=file.filename)
+    return jsonify({'file_id': str(file_id), 'filename': file.filename}), 200
+
+@app.route('/admin_login', methods=['POST'])
+@cross_origin(origin='*')
+def admin_user():
+    request_body = request.get_json()
+    collection = db['admin_login']
+    user = collection.find_one({'username': request_body['username'], 'password': request_body['password']})
+    if user:
+        user['_id'] = str(user['_id'])
+        return send_response({"message": "Login successful", "success": True, "user": user})
+    else:
+        return error_response("Invalid username or password", False)
 
 if __name__ == '__main__':
     app.run(debug=True)

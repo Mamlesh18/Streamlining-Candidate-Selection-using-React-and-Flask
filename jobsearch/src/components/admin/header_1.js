@@ -524,7 +524,7 @@ function SearchBar() {
           </NavLink>
           <NavLink to="/advance">
             <button className="search-button" id="advance-search">
-              C
+              C 
             </button>
           </NavLink>
           

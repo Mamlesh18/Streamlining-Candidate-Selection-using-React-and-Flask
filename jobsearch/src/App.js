@@ -12,6 +12,7 @@ import Welcome from './welcome';
 import Details from './Details';
 import Detail from './components/Front/details'
 import FileUpload from './components/File/FileUpload';
+import Admin_Login from './components/Admin_Login/admin_login';
 
 
 
@@ -23,6 +24,8 @@ function App() {
         <Route path="/" element={<FrontPage />} />
         <Route path="/advance" element={<Advance />} />
         <Route path="/FileUpload" element={<FileUpload />} />
+        <Route path="/admin_login" element={<Admin_Login />} />
+
 
         <Route path="/user" element={<User />} />
         <Route path="/welcome" element={<Welcome />} />

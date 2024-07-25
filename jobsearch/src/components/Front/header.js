@@ -105,6 +105,11 @@ function SearchBar({ updateFilterData }) {
               S
             </button>
           </NavLink>
+          <NavLink to="/admin_login">
+            <button className="search-button-1" id="resume">
+              Admin Login
+            </button>
+          </NavLink>
           <NavLink to="/login">
             <button id="login" className="login-button">
               Login
