@@ -8,7 +8,7 @@ import Resume from './components/Resume/resume';
 import User from './components/User/user';
 import Testing from './components/testing/signup1';
 import Admin from './admin';
-import Welcome from './welcome';
+import Welcome from './components/Other Extra Codes/welcome';
 import Details from './Details';
 import Detail from './components/Front/details'
 import FileUpload from './components/File/FileUpload';
