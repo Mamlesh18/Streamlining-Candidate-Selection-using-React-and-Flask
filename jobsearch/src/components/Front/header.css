@@ -80,32 +80,32 @@ header {
 
   right: 110px;  
 }
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 0 110px;
+}
+
+.search-button-1 {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 20px;
+}
 .search-button-2{
   background-color: blue;
   color: white;
   border: none;
   padding: 10px 20px;
-  position: absolute;
   cursor: pointer;
   border-radius: 10px;
-  top: 20px;
-  margin-top: 4px;
-
-  right: 120px;  
-}
-.login-button {
-  background-color: blue;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  position: absolute;
-  cursor: pointer;
-  border-radius: 10px;
-  top: 20px;
-  margin-top: 4px;
-
-  right: 20px;
-}
+  margin-top: px;}
 
 
 @media screen and (max-width: 720px) {

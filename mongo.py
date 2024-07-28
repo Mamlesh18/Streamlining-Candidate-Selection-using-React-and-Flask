@@ -17,6 +17,7 @@ def add_data():
     collection = db['testcollection']
     collection.insert_one(data)
     return jsonify({"message": "Data added successfully!"})
+    
 
 @app.route('/get', methods=['GET'])
 def get_data():

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { getCall, apiEndpoint } from '../utils/api';
+import './header.css';
+
 
 function SearchBar({ updateFilterData }) {
   const [searchSkills, setSearchSkills] = useState('');
