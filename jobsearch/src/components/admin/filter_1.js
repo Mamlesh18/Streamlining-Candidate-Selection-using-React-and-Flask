@@ -12,7 +12,7 @@ const Filter = ({ filterData }) => {
   useEffect(() => {
     const fetchTop10Details = async () => {
       try {
-        let res = await getCall(`admin?intervals=${selectedIntervals}`);
+        let res = await getCall(`filter?interval=${selectedIntervals}`);
         const regularTop10 = res.data.data;
 
          const mergedTop10 = filterData.length > 0 ? [...filterData, ...regularTop10] : regularTop10;
@@ -162,7 +162,7 @@ const Filter = ({ filterData }) => {
 
   <div>
     <div class="joberz">
-        <h1>Top 10 Details</h1>
+        <h1>Details</h1>
         <label>
           Sort by:
           <select value={selectedIntervals} onChange={handleSortChange}>

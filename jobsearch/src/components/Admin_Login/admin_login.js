@@ -20,7 +20,7 @@ function Admin_Login() {
       let res = await postCall("admin_login", requestBody);
   
       if (res.data.success) {
-        history("/", { state: { id: username } });
+        history("/admin", { state: { id: username } });
       } else {
         alert("Invalid username or password");
       }
