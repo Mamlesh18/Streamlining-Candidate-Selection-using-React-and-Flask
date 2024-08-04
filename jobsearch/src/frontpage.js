@@ -7,6 +7,7 @@ function FrontPage() {
 
   const updateFilterData = (data) => {
     setFilterData(data);
+    console.log(data)
   };
 
   return (

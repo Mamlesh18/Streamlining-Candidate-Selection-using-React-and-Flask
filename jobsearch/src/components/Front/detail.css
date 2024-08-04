@@ -1,0 +1,34 @@
+.detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e6f7ff; 
+    padding: 20px;
+  }
+  
+  .detail-card {
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .detail-card p {
+    margin: 10px 0;
+    color: #333333; 
+    font-family: Arial, sans-serif;
+  }
+  
+  .detail-card .job-type {
+    font-weight: bold;
+    color: #0073e6; 
+  }
+  
+  .detail-card span {
+    font-style: italic;
+    color: #666666; 
+  }
+  

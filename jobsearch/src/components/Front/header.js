@@ -15,7 +15,7 @@ function SearchBar({ updateFilterData }) {
       console.log('API Response:', res);
 
       if (res.data.success) {
-        setSearchResults(res.data.data.slice(0, 3));
+        setSearchResults(res.data.data);
         updateFilterData(res.data.data); // Update the filter data in the parent component
       } else {
         setSearchResults([]);
@@ -26,9 +26,9 @@ function SearchBar({ updateFilterData }) {
     }
   };
 
-  useEffect(() => {
-    console.log('Search Results:', searchResults);
-  }, [searchResults]);
+  // useEffect(() => {
+  //   console.log('Search Results:', searchResults);
+  // }, [searchResults]);
 
   return (
     <div className="container-1">

@@ -109,7 +109,7 @@ def get_filter_data():
     city = request_body['city']
     skill = request_body['state']
 
-    query =  "'$and': [ { '$or': [ { 'skills': { '$in': %SKILLS% } }, { 'jobtype': { '$regex': '%JOBTYPE%', '$options': 'i' } } ] }, { %CITY% } ]"
+    query =  "'$and': [ { '$or': [ { 'technicalskills': { '$in': %SKILLS% } }, { 'jobtype': { '$regex': '%JOBTYPE%', '$options': 'i' } } ] }, { %CITY% } ]"
     pipeLineQuery = "[ { '$match': { '%MATCH%' } }, { '$addFields': { 'cvLastUpdatedInDays': { '$divide': [ { '$subtract': [ "+datetime.utcnow()+", '$updatedDate' ] }, 1000 * 60 * 60 * 24 ] } } }, { '$group': { '_id': None, 'users': { '$addToSet': '$$ROOT' }, 'jobTitles': { '$addToSet': '$job' } } } ]"
 
     if city is not None or skill is not None:
@@ -151,13 +151,16 @@ def get_filter_data():
 @cross_origin(origin='*')
 def get_detail(detailId):
     try:
-        detail = db['user-details'].find_one({'_id': ObjectId(detailId)}) 
+        detail = db['user-details'].find_one({'_id': ObjectId(detailId)})
         if detail:
-            return send_response(detail)
+            # Convert the ObjectId to string
+            
+            return jsonify(serialize_doc(detail))
+
         else:
-            return error_response("Detail not found", False)
+            return jsonify({"error": "Detail not found", "success": False}), 404
     except Exception as e:
-        return error_response(f"Error fetching detail: {str(e)}", False)
+        return jsonify({"error": f"Error fetching detail: {str(e)}", "success": False}), 500
 fs = gridfs.GridFS(db)
 
 @app.route('/file', methods=['POST'])
@@ -262,6 +265,12 @@ def admin_data():
     
     result = list(collection.aggregate(pipeline))
     return send_response(result)
+
+def serialize_doc(doc):
+    """Convert MongoDB document to a serializable format."""
+    if doc:
+        doc['_id'] = str(doc['_id'])
+    return doc
 
 if __name__ == '__main__':
     app.run(debug=True)

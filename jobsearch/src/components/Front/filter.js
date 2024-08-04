@@ -24,7 +24,20 @@ const Filter = ({ filterData }) => {
     };
 
     fetchTop10Details();
-  }, [selectedInterval, filterData]); // Update when selectedInterval or filterData changes
+  }, [selectedInterval]); // Update when selectedInterval or filterData changes
+
+
+
+
+  useEffect(() => {
+      
+       
+    setTop10Data(filterData);
+    console.log(filterData)
+    
+  }, [ filterData]);
+
+
 
   const handleSortChange = (event) => {
     setSelectedInterval(event.target.value);
